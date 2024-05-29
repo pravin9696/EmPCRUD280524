@@ -1,0 +1,26 @@
+﻿@model EmPCRUD280524.Models.tblEmp
+@{
+    ViewBag.Title = "AddEmp";
+}
+
+<h2>Add employee</h2>
+@using (Html.BeginForm("AddEmp","Employee",FormMethod.Post)){
+
+<table>
+	<tr>
+		<td>@Html.LabelFor(x=>x.name)</td>
+		<td>@Html.TextBoxFor(x=>x.name)</td>		
+	</tr>
+	<tr>
+		<td>@Html.LabelFor(x => x.mobile)</td>
+		<td>@Html.TextBoxFor(x => x.mobile)</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">
+			<input type="submit" value="submit" />
+		</td>		
+		
+	</tr>
+</table>
+}
